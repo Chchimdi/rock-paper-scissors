@@ -26,7 +26,7 @@ const int MAX = 3;
 
 string gen_random(int n){
     char alphabet[MAX] = {
-        'a', 'b', 'c'//, 'd', 'e', 'f' //, 'g',
+        'r', 'p', 's'//, 'd', 'e', 'f' //, 'g',
         //   'h', 'i', 'j', 'k', 'l', 'm', 'n',
         //   'o', 'p', 'q', 'r', 's', 't', 'u',
         //   'v', 'w', 'x', 'y', 'z'
@@ -58,57 +58,58 @@ int main() {
         // The codes below will compare the moves made by the player and computer.
         if (userInput == computerInput)
         {
-            cout << "Your move is ' " << userInput << "', while computer move is ' " << computerInput << "'." << endl;
+            cout << "Your move is '" << userInput << "', while computer move is '" << computerInput << "'." << endl;
             draw = draw + 1;
             cout << "win = " << win << ", Draw = " << draw << ", Loss = " << lose << "." << endl;
         }
         else if (userInput == "s" and computerInput == "p")
         {
-            cout << "Your move is ' " << userInput << "', while computer move is ' " << computerInput << "'." << endl;
+            cout << "Your move is '" << userInput << "', while computer move is '" << computerInput << "'." << endl;
             win = win + 1;
             cout << "win = " << win << ", Draw = " << draw << ", Loss = " << lose << "." << endl;
         }
         else if (userInput == "p" and computerInput == "r")
         {
-            cout << "Your move is ' " << userInput << "', while computer move is ' " << computerInput << "'." << endl;
+            cout << "Your move is '" << userInput << "', while computer move is '" << computerInput << "'." << endl;
             win = win + 1;
             cout << "win = " << win << ", Draw = " << draw << ", Loss = " << lose << "." << endl;
         }
         else if (userInput == "r" and computerInput == "s")
         {
-            cout << "Your move is ' " << userInput << "', while computer move is ' " << computerInput << "'." << endl;
+            cout << "Your move is '" << userInput << "', while computer move is '" << computerInput << "'." << endl;
             win = win + 1;
             cout << "win = " << win << ", Draw = " << draw << ", Loss = " << lose << "." << endl;
         }
         else if (userInput == "p" and computerInput == "s")
         {
-            cout << "Your move is ' " << userInput << "', while computer move is ' " << computerInput << "'." << endl;
+            cout << "Your move is '" << userInput << "', while computer move is '" << computerInput << "'." << endl;
             lose = lose + 1;
             cout << "win = " << win << ", Draw = " << draw << ", Loss = " << lose << "." << endl;
         }
         else if (userInput == "r" and computerInput == "p")
         {
-            cout << "Your move is ' " << userInput << "', while computer move is ' " << computerInput << "'." << endl;
+            cout << "Your move is '" << userInput << "', while computer move is '" << computerInput << "'." << endl;
             lose = lose + 1;
             cout << "win = " << win << ", Draw = " << draw << ", Loss = " << lose << "." << endl;
         }
         else if (userInput == "s" and computerInput == "r")
         {
-            cout << "Your move is ' " << userInput << "', while computer move is ' " << computerInput << "'." << endl;
+            cout << "Your move is '" << userInput << "', while computer move is '" << computerInput << "'." << endl;
             lose = lose + 1;
             cout << "win = " << win << ", Draw = " << draw << ", Loss = " << lose << "." << endl;
         }
-        // This code checks if users inputs wrong move and prompts them to input the correct move.
-        // else if (userInput != "r" or userInput != "p" or userInput != "s")
-        // {
-        //     cout << "You have selected an invalid move." << endl;
-        //     cout << "Enter a move: r(Rock), p(Paper), s(Scissors) or q(Quit)." << endl; 
-        // }
         //This code will send the user to quit from the game.
         else if (userInput == "q")
         {
             break;
         }
+        // This code checks if users inputs wrong move and prompts them to input the correct move.
+        else if (userInput != "r" or userInput != "p" or userInput != "s" or userInput != "q")
+        {
+            cout << "You have selected an invalid move." << endl;
+            cout << "Enter a move: r(Rock), p(Paper), s(Scissors) or q(Quit)." << endl; 
+        }
+        
     }
 
     // This code will display the total score of the game.
